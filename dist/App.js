@@ -1,3 +1,46 @@
+class User {
+    constructor(name, age, nickName, password) {
+        this.name = name;
+        this.age = age;
+        this.nickName = nickName;
+        this.password = password;
+    }
+}
+const myroslav = new User("Myroslav", 18, "Shymon", "sdfdfg");
+console.log("class User", myroslav);
+class User2 {
+    constructor(username, age, name, surname) {
+        this.username = username;
+        this.age = age;
+        this.name = name;
+        this.surname = surname;
+    }
+    getUser2() {
+        return `Default name and surname of User2 are ${this.name}${this.surname} other are ${this.username} ${this.age}`;
+    }
+}
+const user2 = new User2("regwert", 32, "dsvr", "SER");
+console.log("class User2", user2);
+class User3 {
+    constructor() {
+        this._age = 0;
+    }
+    setAge(age) {
+        this._age = age;
+    }
+    get age() {
+        return this._age;
+    }
+    set age(age) {
+        this._age = age || 0;
+    }
+}
+const someUser3 = new User3();
+console.log("age1", someUser3.age);
+someUser3.age = 20;
+someUser3.setAge(24);
+console.log("age", someUser3.age);
+console.log("class User3", someUser3);
 var Directions1;
 (function (Directions1) {
     Directions1[Directions1["Up"] = 0] = "Up";
@@ -34,6 +77,11 @@ console.log("cratePassword()", cratePassword2String);
 const createSkills = (name, ...skills) => `${name} and skills are: ${skills}`;
 let createSkillsVariable = createSkills("Stepan", "React", "Vue", "Angular");
 console.log("createSkillsVariable", createSkillsVariable);
+let myFunc;
+function oldFunc(name) {
+    console.log(`Your name is ${name}`);
+}
+myFunc = oldFunc;
 const create = (o) => {
     console.log("Object", o);
 };
@@ -43,6 +91,19 @@ create({ obj: 1 });
     id = 10;
     id = "sdfdfr";
 }
+let user = {
+    name: "Myroslav",
+    age: 18,
+    nickName: "Shymon",
+};
+let admin = {
+    name: "Egor",
+    age: 33,
+    nickName: "Letov",
+    getFullUser() {
+        return `${this.name}${this.age}${this.nickName}`;
+    },
+};
 {
     let id;
     id = "dsfge";
