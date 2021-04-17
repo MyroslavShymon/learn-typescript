@@ -4,6 +4,7 @@
     "removeComments": true,
     "sourceMap": true,
     "outDir": "./dist",
-    "outFile": "./dist/App.js"
+    // "outFile": "./dist/App.js"
+    "experimentalDecorators": true
   }
 }

@@ -16,4 +16,4 @@ const nul = null;
 const helloUser = () => {
     console.log("Hello user!!!!!!!!!");
 };
-//# sourceMappingURL=types.js.map
+//# sourceMappingURL=types1.js.map
